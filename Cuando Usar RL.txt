@@ -1,0 +1,5 @@
+3 grandes preguntas para saber cuando utilizar una regresion lineal:
+
+¿Tengo que predecir una variable numerica? la respuesta debe ser afirmativa.
+¿Las variables independientes con las que cuento son primordialmente numericas? debe ser afirmativa
+Cuento con una gran cantidad de avriables categoricas? o poicas variables con muchos niveles? no es aconsejable utilizr la regresion lineal en caso de este numerals er afirmativo.

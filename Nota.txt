@@ -1,0 +1,30 @@
+Este capítulo me dejó unas dudas que resolví investigando un poco.
+
+Al no colocar un test_size, se asume que toma un 75% para train y 25% para test
+El .fit lo que haría es obtener la media y la desviación estandar para luego aplicarlo al usar la transformación.
+Al hacer un fit de X, y es para sacar los valores que describo en 2) y aplicarlos al X_train, X_test, y_train, y_test
+No siempre es necesario aplicar un fit_transform al target
+En caso uses el método que coloco abajo, debes saber que .fit_transform se aplica a X_train, y_train, y .transform solo se aplica a X_test, y_test
+Yo lo hice de esta manera, es otra opción:
+
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+
+X = data.drop(columns = ['charges'])
+y = data[['charges']]
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25)
+
+sc_x = StandardScaler()
+X_train = sc_x.fit_transform(X_train)
+X_test = sc_x.transform(x_test)
+
+sc_y = StandardScaler()
+y_train = sc_y.fit_transform(y_train)
+y_test = sc_y.transform(y_test)
+
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+y_pred = model.predict(X_test)

@@ -1,0 +1,15 @@
+------>Evaluando el modelo: R^2 y MSE<--------
+
+σ Entenderemos las dos metricas principales del curso, que tienen el fin de ver la manera en la que se ajusto el modelo hecho, en comparacion a los datos reales. Mas estas pueden ser usadas, para cualquier modelo de regresion. (O mas bien, intentando predecir valores numericos.)
+Estas metricas son:
+1 . Mean Square Error (MSE)
++Se usa para minimizar el costo dentro de tu funcion. OR / AND Se usa para evaluar la funcion de perdida.
++Solo aplica la formula MSE, los resultados se comparan a las predeciciones. Mas de ver que no esta saliendo bien, quiere decir que las proyecciones no se estan ajustando. (Si el valor llega a ser muy grande, tiende a ser inpreciso).
++Esta metrica tiene mayor valor cuando es usada en tres dimensiones, a comparacion de solo dos.
+2 . Coeficiente de determinacion ( R^2 ).
++Ayuda para mostrar los bueno que se ajustan el modelo con los datos que hay, asi como su variabilidad real.
++Es una de las mas utilizadas.
++Cuanto el resultado se acerce a " 1 ", mejor.
+σ Luis menciona que otras metricas son : R-agistada, Error maximo, Error absoluto promedio (MAE), Mediana de los errores absoluto, Raiz del promedio de los errores cuadrados (RMSE), Varianza explicada.
+σ Por ultmo, Luis explica otra manera (muy interesante) de evaluar un modelo a traves de graficas.
++Teniendo una grafica, sea cual sea la direccion que tiene, se puede hacer zoom en ella, y rotarla a un angulo de 0, luego se dibuja una linea horizontal recta (la cual representa la prediccion) y se evalua que tan distanciados los datos de la linea horizontal
